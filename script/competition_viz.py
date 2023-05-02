@@ -493,11 +493,24 @@ def viz():
             clock.tick(20)
 
         pygame.display.flip()
-        pygame.time.wait(10000)
+        pygame.time.wait(4000)
         Done = True
 
     pygame.quit()
 
+def velocity_output():
+    # Writing VelNodes.txt
+    file = open('sbadshah_Vel_Nodes.txt', 'w')
+    file.write('sbadshah\n')
+    file.write('Time step = 0.1\n')
+    file.write("msg.angular.z \t\t msg.linear.x\n")
+    for i in range(len(vel_backtrack)):
+        file.write("\t")
+        file.write(str(round(vel_backtrack[i][2],4)))
+        file.write("\t\t\t\t\t")
+        file.write(str(round(np.sqrt(vel_backtrack[i][0]**2 + vel_backtrack[i][1]**2),4)))
+        file.write("\n")
+    file.close()
 
 # Global variable initialization
 explored_nodes = heapdict.heapdict()
@@ -511,8 +524,8 @@ velocity_track = {}
 pop = []
 the_path = []
 index = 0
-RPM1 = 5
-RPM2 = 10
+RPM1 = 3
+RPM2 = 6
 
 obstacle_buffer = 5
 
@@ -527,7 +540,7 @@ theta_s = 0
 init_pos = (x_s, y_s, theta_s)
 
 x_f = 300
-y_f = 20
+y_f = 150
 goal_pos = (x_f, y_f)
 
 # The A* algorithm
@@ -576,7 +589,7 @@ if __name__ == '__main__':
                 end = time.time()
                 print('Time: ', round((end - start), 2), 's')
                 print('Iterations: ', index)
-
+                velocity_output()
                 viz()
                 # move(the_vel_path)
                 break
@@ -593,3 +606,6 @@ if __name__ == '__main__':
         print('Cannot A-star, starting node in an obstacle space.')
     elif not check_obstacles(x_f, y_f):
         print('Cannot A-star, goal node in an obstacle space.')
+
+
+    
