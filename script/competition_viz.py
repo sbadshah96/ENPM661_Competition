@@ -35,109 +35,141 @@ def obstacles_rec(obstacle_buffer, robot_size=10.5):
 
     buffer_val = obstacle_buffer + robot_size
 
+
+    # 1st Column of Obstacles
     # Rectangle 1 obstacle space
-    x1_rec1 = 75 - buffer_val
+    x1_rec1 = 70 - buffer_val
     obstacles.append(x1_rec1)
 
-    x2_rec1 = 90 + buffer_val
+    x2_rec1 = 85 + buffer_val
     obstacles.append(x2_rec1)
 
-    y1_rec1 = 50 - buffer_val
+    y1_rec1 = 37.5 - buffer_val
     obstacles.append(y1_rec1)
 
-    y2_rec1 = 65 + buffer_val
+    y2_rec1 = 52.5 + buffer_val
     obstacles.append(y2_rec1)
 
     # Rectangle 2 obstacle space
-    x1_rec2 = 75 - buffer_val
+    x1_rec2 = 70 - buffer_val
     obstacles.append(x1_rec2)
 
-    x2_rec2 = 90 + buffer_val
+    x2_rec2 = 85 + buffer_val
     obstacles.append(x2_rec2)
 
-    y1_rec2 = 100 - buffer_val
+    y1_rec2 = 92.5 - buffer_val
     obstacles.append(y1_rec2)
 
-    y2_rec2 = 115 + buffer_val
+    y2_rec2 = 107.5 + buffer_val
     obstacles.append(y2_rec2)
 
     # Rectangle 3 obstacle space
-    x1_rec3 = 75 - buffer_val
+    x1_rec3 = 70 - buffer_val
     obstacles.append(x1_rec3)
 
-    x2_rec3 = 90 + buffer_val
+    x2_rec3 = 85 + buffer_val
     obstacles.append(x2_rec3)
 
-    y1_rec3 = 150 - buffer_val
+    y1_rec3 = 147.5 - buffer_val
     obstacles.append(y1_rec3)
 
-    y2_rec3 = 165 + buffer_val
+    y2_rec3 = 162.5 + buffer_val
     obstacles.append(y2_rec3)
 
+
+    # 2nd Column of Obstacles
     # Rectangle 4 obstacle space
-    x1_rec4 = 165 - buffer_val
+    x1_rec4 = 145 - buffer_val
     obstacles.append(x1_rec4)
 
-    x2_rec4 = 180 + buffer_val
+    x2_rec4 = 155 + buffer_val
     obstacles.append(x2_rec4)
 
-    y1_rec4 = 50 - buffer_val
+    y1_rec4 = 0
     obstacles.append(y1_rec4)
 
-    y2_rec4 = 65 + buffer_val
+    y2_rec4 = 15 + buffer_val
     obstacles.append(y2_rec4)
 
     # Rectangle 5 obstacle space
-    x1_rec5 = 165 - buffer_val
+    x1_rec5 = 145 - buffer_val
     obstacles.append(x1_rec5)
 
-    x2_rec5 = 180 + buffer_val
+    x2_rec5 = 155 + buffer_val
     obstacles.append(x2_rec5)
 
-    y1_rec5 = 125 - buffer_val
+    y1_rec5 = 60 - buffer_val
     obstacles.append(y1_rec5)
 
-    y2_rec5 = 140 + buffer_val
+    y2_rec5 = 75 + buffer_val
     obstacles.append(y2_rec5)
 
     # Rectangle 6 obstacle space
-    x1_rec6 = 255 - buffer_val
+    x1_rec6 = 145 - buffer_val
     obstacles.append(x1_rec6)
 
-    x2_rec6 = 270 + buffer_val
+    x2_rec6 = 155 + buffer_val
     obstacles.append(x2_rec6)
 
-    y1_rec6 = 50 - buffer_val
+    y1_rec6 = 125 - buffer_val
     obstacles.append(y1_rec6)
 
-    y2_rec6 = 65 + buffer_val
+    y2_rec6 = 140 + buffer_val
     obstacles.append(y2_rec6)
 
     # Rectangle 7 obstacle space
-    x1_rec7 = 255 - buffer_val
+    x1_rec7 = 145 - buffer_val
     obstacles.append(x1_rec7)
 
-    x2_rec7 = 270 + buffer_val
+    x2_rec7 = 155 + buffer_val
     obstacles.append(x2_rec7)
 
-    y1_rec7 = 100 - buffer_val
+    y1_rec7 = 185 - buffer_val
     obstacles.append(y1_rec7)
 
-    y2_rec7 = 115 + buffer_val
+    y2_rec7 = 200
     obstacles.append(y2_rec7)
 
-    # Rectangle 8 obstacle space
-    x1_rec8 = 255 - buffer_val
+
+    # 3rd Column of Obstacles
+    # Rectangle 6 obstacle space
+    x1_rec8 = 220 - buffer_val
     obstacles.append(x1_rec8)
 
-    x2_rec8 = 270 + buffer_val
+    x2_rec8 = 235 + buffer_val
     obstacles.append(x2_rec8)
 
-    y1_rec8 = 150 - buffer_val
+    y1_rec8 = 37.5 - buffer_val
     obstacles.append(y1_rec8)
 
-    y2_rec8 = 165 + buffer_val
+    y2_rec8 = 52.5 + buffer_val
     obstacles.append(y2_rec8)
+
+    # Rectangle 7 obstacle space
+    x1_rec9 = 220 - buffer_val
+    obstacles.append(x1_rec9)
+
+    x2_rec9 = 235 + buffer_val
+    obstacles.append(x2_rec9)
+
+    y1_rec9 = 92.5 - buffer_val
+    obstacles.append(y1_rec9)
+
+    y2_rec9 = 107.5 + buffer_val
+    obstacles.append(y2_rec9)
+
+    # Rectangle 8 obstacle space
+    x1_rec10 = 220 - buffer_val
+    obstacles.append(x1_rec10)
+
+    x2_rec10 = 235 + buffer_val
+    obstacles.append(x2_rec10)
+
+    y1_rec10 = 147.5 - buffer_val
+    obstacles.append(y1_rec10)
+
+    y2_rec10 = 162.5 + buffer_val
+    obstacles.append(y2_rec10)
 
     # Boundary obstacle space
     x1_bound = 0 + buffer_val
@@ -194,10 +226,20 @@ def check_obstacles(x, y):
     y1_rec8 = obstacles_var1[30]
     y2_rec8 = obstacles_var1[31]
 
-    x1_bound = obstacles_var1[32]
-    x2_bound = obstacles_var1[33]
-    y1_bound = obstacles_var1[34]
-    y2_bound = obstacles_var1[35]
+    x1_rec9 = obstacles_var1[32]
+    x2_rec9 = obstacles_var1[33]
+    y1_rec9 = obstacles_var1[34]
+    y2_rec9 = obstacles_var1[35]
+
+    x1_rec10 = obstacles_var1[36]
+    x2_rec10 = obstacles_var1[37]
+    y1_rec10 = obstacles_var1[38]
+    y2_rec10 = obstacles_var1[39]
+
+    x1_bound = obstacles_var1[40]
+    x2_bound = obstacles_var1[41]
+    y1_bound = obstacles_var1[42]
+    y2_bound = obstacles_var1[43]
 
     if (((x1_rec1) <= x <= (x2_rec1)) and ((y1_rec1) <= y <= (y2_rec1))):
         return False
@@ -214,6 +256,10 @@ def check_obstacles(x, y):
     elif (((x1_rec7) <= x <= (x2_rec7)) and ((y1_rec7) <= y <= (y2_rec7))):
         return False
     elif (((x1_rec8) <= x <= (x2_rec8)) and ((y1_rec8) <= y <= (y2_rec8))):
+        return False
+    elif (((x1_rec9) <= x <= (x2_rec9)) and ((y1_rec9) <= y <= (y2_rec9))):
+        return False
+    elif (((x1_rec10) <= x <= (x2_rec10)) and ((y1_rec10) <= y <= (y2_rec10))):
         return False
     elif ((x <= x1_bound) or (y <= y1_bound) or (y >= y2_bound)):
         return False
